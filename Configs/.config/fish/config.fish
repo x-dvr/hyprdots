@@ -2,7 +2,7 @@ set -g fish_greeting
 
 if status is-interactive
     starship init fish | source
-    eval $(ssh-agent -c)
+    eval $(ssh-agent -c) >> /dev/null
     ssh-add
 end
 
